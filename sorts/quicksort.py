@@ -17,7 +17,7 @@ def quicksort(lst, low, high):
     quicksort(lst, i, high)
 
 
-# Verify it works
-random_list_of_nums = [99, 4, 5, 5, 44, 10, 20, -1]
-quicksort(random_list_of_nums, 0, len(random_list_of_nums) - 1)
-print(random_list_of_nums)
+if __name__ == '__main__':
+    list_of_nums = [99, 4, 5, 5, 44, 10, 20, -1]
+    quicksort(list_of_nums, 0, len(list_of_nums) - 1)
+    print(list_of_nums)
