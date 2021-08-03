@@ -21,4 +21,4 @@ def quicksort(lst, low, high):
 if __name__ == '__main__':
     list_of_nums = [99, 4, 5, 6, 44, 10, 5, 20, -1]
     quicksort(list_of_nums, 0, len(list_of_nums) - 1)
-    print(list_of_nums)
+    print(list_of_nums)  # [-1, 4, 5, 5, 6, 10, 20, 44, 99]
