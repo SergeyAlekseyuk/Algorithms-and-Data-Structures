@@ -1,4 +1,5 @@
 def quicksort(lst, low, high):
+    """Hoare partition scheme"""
     if low >= high:
         return
 
@@ -18,6 +19,6 @@ def quicksort(lst, low, high):
 
 
 if __name__ == '__main__':
-    list_of_nums = [99, 4, 5, 5, 44, 10, 20, -1]
+    list_of_nums = [99, 4, 5, 6, 44, 10, 5, 20, -1]
     quicksort(list_of_nums, 0, len(list_of_nums) - 1)
     print(list_of_nums)
