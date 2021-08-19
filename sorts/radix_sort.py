@@ -18,7 +18,7 @@ def counting_sort(lst, p):
 
 def radix_sort(lst, d):
     for i in range(d):
-        lst = counting_sort(lst, i)
+        lst = counting_sort(lst, i)  # any stable sorting algorithm
     return lst
 
 
