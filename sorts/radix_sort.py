@@ -1,17 +1,21 @@
+def digit(num, i):
+    return num // (10 ** i) % 10
+
+
 def counting_sort(lst, p):
     sorted_lst = [0] * len(lst)
 
     temp = [0 for _ in range(10)]
 
     for i in range(len(lst)):
-        temp[lst[i] // (10 ** p) % 10] += 1
+        temp[digit(lst[i], p)] += 1
 
     for j in range(1, 10):
         temp[j] = temp[j] + temp[j - 1]
 
     for i in range(len(lst) - 1, -1, -1):
-        sorted_lst[temp[lst[i] // (10 ** p) % 10] - 1] = lst[i]
-        temp[lst[i] // (10 ** p) % 10] -= 1
+        sorted_lst[temp[digit(lst[i], p)] - 1] = lst[i]
+        temp[digit(lst[i], p)] -= 1
 
     return sorted_lst
 
